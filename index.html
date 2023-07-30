@@ -1,396 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--jquery CDN-->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--font icon cdn-->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <title>鳥類攝影網站</title>
-	
-    
-	
-	<style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<title></title>
+  	<link rel="stylesheet" href="">
+  	
+  	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ 	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  	<style type="text/css">
+      
+	    body{font-family: -apple-system,BlinkMacSystemFont,"Microsoft JhengHei","Roboto","Helvetica Neue", Arial, sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;}
+        header{background:#7DB45F; height:auto;}
+       .logo{background:url('portfoliopic/logo.png'); width:100px;height:85px;}
+     
+        article {background-color:#FCFCFC;height:900px;}
+	    #picbox1{position:relative;top:80px;}
+		#page{position:relative;top:60px;right:160px;}
+		h1{color:#0066CC;}
+ 	  
+		footer{background:#7DB45F;height:70px;}
+		.fp{position:relative;top:10px;font-size:32px;}   
+      
+        @media only screen  and (max-width:2000px){
+            #picbox1{position:relative;top:50px;}
+            #page{position:relative;top:60px;right:160px;}
         }
 
+        @media only screen  and (max-width:1500px){
+            #picbox1{position:relative;top:50px;}
+            #page{position:relative;top:60px;right:25px;overflow:scroll;}
+        }
+
+        @media only screen  and (max-width:1024px){
+            #picbox1{position:relative;top:120px;}
+            #page{position:relative;top:130px;right:25px;overflow:scroll;}
+        }
        
-        
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        @media only screen  and (max-width:768px){
+            #picbox1{position:relative;top:120px;}
+            #page{position:relative;top:130px;overflow:scroll;}
         }
-        .container{
-
-            display: inline-flex;
-            
-        }
-
-        #box{
-            
-            width:280px;
-            height:800px;
-            background-color:#696969;
-            box-sizing:border-box;
-        }
-
-        #bigpicbox{
-           
-            width:1000px;
-            height:800px;;
-            box-sizing:border-box;
-        }
-
-        #bigimg{
-            box-sizing:border-box; 
-            height:100%;
-            width:100%;
-        }
-
-        .div1{
-            width:280px;
-            height:320px; 
-            background-color:#7DB45F;
-            margin: 0 auto;
-        }
-
-        #headshot{
-            width:120px;
-            height:120px;
-            display: block;
-            box-sizing:border-box;
-        }
-
-        .divimg{
-            position:relative;top:20px;left:86px;
-        }
-
-        .divimg img{
-            border-radius:50%
-        }
-        .about{
-            color:white;
-            font-size:36px;
-            text-align: center;
-            position: relative;top:20px
-        }
-        .content{
-            color:white;
-            font-size:32px;
-            text-align: center;
-            position: relative;top:30px
-        }
-        .icons{
-            
-            /*background-color: pink;*/
-            position: relative;top:60px;
-            text-align: center;
-        }
-        #email{
-            color:azure;
-            font-size:24px;
-            letter-spacing:5px;
-        }
-        #twitter{ 
-            color:lightskyblue;
-            font-size:24px;
-            letter-spacing:5px;
-        }
-        #instagram{
-            color:#9D20E8;
-            font-size:24px;
-            letter-spacing:5px;
-        }
-        #facebook-messenger{
-            color:blue;
-            font-size:24px;
-            letter-spacing:5px;
-        }
-        #tumblr{
-            color:plum;
-            font-size:24px;
-            letter-spacing:5px;
-        }
-
-        .div2{
-            width:160px;
-            height:377px;
-            box-sizing:border-box;
-            background-color:#696969;
-        }
-
-        #pictable{
-            
-            border-collapse: collapse; 
-        }
-
-        .divtable{
-            overflow: scroll;
-            width:250px;
-            height: 350px;
-            position: relative;top:13px;left:20px;
-        }
-
-        #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16{
-            width:120px;
-            height:100px;
-            display: block;
-        }
-
-        .div3{
-            background-color:#7DB45F;
-            width:280px;
-            height:103px;
-            
-        }
-        .div3 p{
-            color: white;
-            text-align: center;
-            position: relative;top:40px;
-            
-        }
-        
-        @media(max-width:1100px) {
-           
-            
-            .container{
-               display: inline-flex;
-            }
-
-            #box{
-                
-                width:200px;
-                height:480px;
-                background-color:#696969;
-                box-sizing:border-box;
-            }
-
-            #bigpicbox{
-                
-                width:600px;
-                height:480px;;
-                box-sizing:border-box;
-            }
-
-            #bigimg{
-                box-sizing:border-box; 
-                height:100%;
-                width:100%;
-            }
-
-            .div1{
-                width:200px;
-                height:200px; 
-                background-color:#7DB45F;
-                margin: 0 auto;
-            }
-
-            #headshot{
-                width:60px;
-                height:60px;
-                display: block;
-                box-sizing:border-box;
-            }
-
-            .divimg{
-                position:relative;top:10px;left:70px;
-            }
-
-            .divimg img{
-                border-radius:50%
-            }
-            .about{
-                color:white;
-                font-size:32px;
-                text-align: center;
-                position: relative;top:10px
-            }
-            .content{
-                color:white;
-                font-size:20px;
-                text-align: center;
-                position: relative;top:25px
-            }
-            .icons{
-                
-               
-                position: relative;top:46px;
-                text-align: center;
-            }
-            #email{
-                color:azure;
-                font-size:16px;
-                letter-spacing:5px;
-            }
-            #twitter{ 
-                color:lightskyblue;
-                font-size:16px;
-                letter-spacing:5px;
-            }
-            #instagram{
-                color:#9D20E8;
-                font-size:16px;
-                letter-spacing:5px;
-            }
-            #facebook-messenger{
-                color:blue;
-                font-size:16px;
-                letter-spacing:5px;
-            }
-            #tumblr{
-                color:plum;
-                font-size:16px;
-                letter-spacing:5px;
-            }
-
-            .div2{
-                width:200px;
-                height:200px;
-                box-sizing:border-box;
-                background-color:#696969;
-            }
-
-            #pictable{
-                
-                border-collapse: collapse; 
-            }
-
-            .divtable{
-                overflow: scroll;
-                width:160px;
-                height: 170px;
-                position: relative;top:15px;left:22px;
-            }
-
-            #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16{
-                width:80px;
-                height:60px;
-                display: block;
-            }
-
-            .div3{
-                background-color:#7DB45F;
-                width:200px;
-                height:80px;
-                
-            }
-            .div3 p{
-                color: white;
-                text-align: center;
-                position: relative;top:25px;
-                
-            }
-        }
-        
     </style>
+
 </head>
+
 <body>
   
+ 
+      <header>
+          <a href="index.html" title="點我回首頁"> <div class="logo"></div></a>
+      </header>
 
+      <article>
         
+        <section>
             
-            <div class="container">
-
-                <div id="bigpicbox">
-                    <img src="img/white.jpg" alt="bigimg" id="bigimg">
+			   <div class="container" id="picbox1">
+                  	<div class="row justify-content-center align-items-center">
+                        <div class="card h-100">
+                            <img src="portfoliopic/portfolio-01.jpg" class="card-img-top" >
+                              <div class="card-body">
+                              	<h1>封面</h1>
+                              	<p>作品集的封面</p>
+                              </div>
+                         </div>
+                    </div>
                 </div>
-        
-                <div id="box">
-    
-                    <div class="div1">
-        
-                        <div class="divimg">
-                            <img src="pic/headshot.jpg" alt="大頭照" id="headshot">
-                        </div>
-                        <h1 class="about">鳥類攝影網站</h1>
-                        <p class="content">各種鳥類拍攝</p>
-                        <div class="icons">
-                            <a href="https://www.google.com/intl/zh-TW/gmail/about/#" target="_blank"><i class="fal fa-envelope-open-text" id="email"></i></a>
-                            <a href="https://twitter.com/?lang=zh-tw" target="_blank"><i class="fab fa-twitter-square" id="twitter"></i></a>
-                            <a href="https://www.instagram.com/#" target="_blank"><i class="fab fa-instagram" id="instagram"></i></a>
-                            <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=12318083647&extra_1=s%7Cc%7C515909641193%7Ce%7Cfacebook%7C&placement=&creative=515909641193&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D12318083647%26adgroupid%3D119397341964%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D9040380%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMI3aPZypvA9AIVxCFgCh3m0AtOEAAYASAAEgLIk_D_BwE" target="_blank"><i class="fab fa-facebook-messenger" id="facebook-messenger"></i></a>
-                            <a href="https://www.tumblr.com/" target="_blank"><i class="fab fa-tumblr-square" id="tumblr"></i></a>
-                        </div>
-                    </div>
-    
-                    
-    
-                    <div class="div2">
-                        
-                        <div class="divtable">
-    
-                            <table id="pictable"   border="0" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td><img src="img/bird1.jpg" alt="img1" id="img1"></td>
-                                    <td><img src="img/bird2.jpg" alt="img2" id="img2"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/bird3.jpg" alt="img3" id="img3"></td>
-                                    <td><img src="img/bird4.jpg" alt="img4" id="img4"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/bird5.jpg" alt="img5" id="img5"></td>
-                                    <td><img src="img/bird6.jpg" alt="img6" id="img6"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/bird7.jpg" alt="img7" id="img7"></td>
-                                    <td><img src="img/bird8.jpg" alt="img8" id="img8"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/bird9.jpg" alt="img9" id="img9"></td>
-                                    <td><img src="img/bird10.jpg" alt="img10" id="img10"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/bird11.jpg" alt="img11" id="img11"></td>
-                                    <td><img src="img/bird12.jpg" alt="img12" id="img12"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/bird13.jpg" alt="img13" id="img13"></td>
-                                    <td><img src="img/bird14.jpg" alt="img14" id="img14"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/bird15.jpg" alt="img15" id="img15"></td>
-                                    <td><img src="img/bird16.jpg" alt="img16" id="img16"></td>
-                                </tr>
-                            </table>
-    
-                        </div>
-                        
-                        
-                    </div>
-    
-                    
-    
-                    <div class="div3">
-                        <p >&copy; Copyright 2021 Author:TangHongYuan</p>
-                    </div>
-    
-                </div>
-                
-            </div>
+           
+				<br>
+			  
+				<div class="container" id="page">
+					<div class="row justify-content-center align-items-center ">
+						<div class="col-sm-12">
+							<ul class="pagination">
+							  <a class="page-link " href="index.html" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							  </a>
+							  <li class="page-item"><a class="page-link" href="portfolio-1.html">1</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-2.html">2</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-3.html">3</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-4.html">4</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-5.html">5</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-6.html">6</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-7.html">7</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-8.html">8</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-9.html">9</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-10.html">10</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-11.html">11</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-12.html">12</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-13.html">13</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-14.html">14</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-15.html">15</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-16.html">16</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-17.html">17</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-18.html">18</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-19.html">19</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-20.html">20</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-21.html">21</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-22.html">22</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-23.html">23</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-24.html">24</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-25.html">25</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-26.html">26</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-27.html">27</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-28.html">28</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-29.html">29</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-30.html">30</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-31.html">31</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-32.html">32</a></li>
+							  <li class="page-item"><a class="page-link" href="portfolio-33.html">33</a></li>
+							  <a class="page-link" href="portfolioEnd.html" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							  </a>
+							</ul>
+						</div>
+					</div>
+				</div>
             
-            <script>
-                $(document).ready(function(){
-                    $("#box img").click(function(){
-                        var n=$(this).attr("id").substr(3);
-                        $("#bigimg").attr("src","img/bird"+n+".jpg");
-                    });
-                });
-            </script>
-            
-        
 
-  
-    
-    
+        </section>
 
+      </article>
+      
+      
+      	<footer >
+			<div class="text-center text-white fp">© THY 2019</div>	
+		</footer>
+    
 
 </body>
 
